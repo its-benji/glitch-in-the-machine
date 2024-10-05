@@ -14,4 +14,44 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
+}
+
+.audio {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.play_btn {
+    position: absolute;
+    font-size: 40px;
+    color:yellow;
+    font-weight: bolder;
+    font-style: oblique;
+    left: 45%;
+    top: 48%;
+    z-index: 1000;
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+}
+
+.play_txt {
+    animation: flicker 8s infinite;
+    color:yellow;
+    text-decoration: none;
+}
+
+.play_btn:hover {
+    cursor: pointer;
+    color:rgb(212, 210, 53);
+}
+
+@keyframes flicker {
+    0%, 29%, 31%, 33%, 35%, 59%, 61%, 63%, 65%, 91%, 94%, 97% {
+        color: yellow; 
+    }
+    30%, 32%, 34%, 60%, 62%, 64% {
+        color: white; /* Flicker to yellow */
+    }
 }
