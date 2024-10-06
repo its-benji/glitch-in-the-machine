@@ -1,0 +1,90 @@
+ul, ol {
+    padding-left: 0;   /* Remove padding from the list container */
+    margin-left: 0;    /* Remove margin from the list container */
+}
+
+.background {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.game_frame {   
+    width: 300px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+.cover_img {
+    height: 100vh;
+    width: auto;
+}
+
+.img_pos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.audio {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.play_btn {
+    position: absolute;
+    font-size: 40px;
+    color:yellow;
+    font-weight: bolder;
+    font-style: oblique;
+    left: 45%;
+    top: 48%;
+    z-index: 1000;
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+}
+
+.play_txt {
+    animation: flicker 8s infinite;
+    color:yellow;
+    text-decoration: none;
+}
+
+.play_btn:hover {
+    cursor: pointer;
+    color:rgb(212, 210, 53);
+}
+
+@keyframes flicker {
+    0%, 29%, 31%, 33%, 35%, 59%, 61%, 63%, 65%, 91%, 94%, 97% {
+        color: yellow; 
+    }
+    30%, 32%, 34%, 60%, 62%, 64% {
+        color: white;
+    }
+}
+.question_txt {
+    color: white;
+
+}
+#options li {
+    opacity: 0;
+    /* background-color: rgba(176, 10, 10, 0.3); */
+    color: white;
+    border-radius: 5px;
+    margin: 1px;
+    list-style-type: none;
+    cursor: default;
+    padding: 5px;  
+}
+
+#options li:hover {
+    background-color: rgba(43, 42, 42, 0.5);
+}
