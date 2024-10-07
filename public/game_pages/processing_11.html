@@ -1,0 +1,26 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div id="question_11" class="question_txt"></div>
+            <ul id="options">
+                <li>
+                    <a href="processing_12.html" class="option_txt" style="color: rgba(37, 204, 226, 0.884);">connect</a></li>
+                <li><a href="TODO.html" class="option_txt">explore room</a></li>
+                <li><a href="intro_8.html" class="option_txt">return to previous room</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let question = "There's a small screen on the pedestal, displaying an active technical readout.";
+                writePrompt(question, "question_11", showOptions, false);
+            </script>
+        </div>
+    </div>
+</body>
+</html>

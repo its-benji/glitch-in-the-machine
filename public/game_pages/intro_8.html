@@ -1,0 +1,25 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div id="question_8" class="question_txt"></div>
+            <ul id="options">
+                <li>
+                    <a href="processing_9.html" class="option_txt" style="color: rgba(37, 204, 226, 0.884);">enter the processing room</a></li>
+                <li><a href="intro_5.html" class="option_txt">explore current room</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let question = "The path is illuminated with blue light. You follow it to a door at the end of the room. Above it a sign reads: Processing Room.";
+                writePrompt(question, "question_8", showOptions, 0, 0);
+            </script>
+        </div>
+    </div>
+</body>
+</html>

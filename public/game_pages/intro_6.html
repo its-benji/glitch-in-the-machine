@@ -1,0 +1,26 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div id="question_6" class="question_txt"></div>
+            <ul id="options">
+                <li><a href="intro_7.html" class="option_txt">decrypt</a></li>
+                <li>
+                    <a href="intro_8.html" class="option_txt" style="color: rgba(37, 204, 226, 0.884);">return to the path</a>
+                </li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let question = "You stare into a great void, swirling with random numbers and letters.";
+                writePrompt(question, "question_6", showOptions, 0, 0);
+            </script>
+        </div>
+    </div>
+</body>
+</html>

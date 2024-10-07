@@ -1,5 +1,10 @@
-const writePrompt = (str) => {
-    const output = document.querySelector("[id^=question_]");
+async function async_writePrompt(str, id) {
+    await writePrompt(str, id);
+    await writePrompt(str, id);
+}
+
+async function writePrompt(str, id, func, str2, id2) {
+    const output = document.querySelector(`#${id}`);
     let i = 0;
     let done = str.length;
     const writing = setInterval(()=>{
@@ -7,7 +12,11 @@ const writePrompt = (str) => {
         i++;
         if(i === done){
             clearInterval(writing);
-            showOptions();
+            if(id2) {
+                func(str2, id2, showOptions, 0, 0)
+            } else {
+                showOptions();
+            }
         }
     }, 1000/15);
 }
@@ -21,7 +30,7 @@ const showOptions = () => {
 
     const writing = setInterval(()=> {
         options[i].style.opacity = 1;
-        options[i].style.cursor = "pointer";
+        // options[i].style.cursor = "pointer";
         i++
 
         if(i === done) {

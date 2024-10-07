@@ -1,0 +1,26 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div id="question_4" class="question_txt"></div>
+            <ul id="options">
+                <li>
+                    <a href="intro_8.html" class="option_txt" style="color: rgba(37, 204, 226, 0.884);">follow the path</a>
+                </li>
+                <li><a href="intro_5.html" class="option_txt">explore room</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let question = "Follow the path to the next stage to complete your tasks.";
+                writePrompt(question, "question_4", showOptions, 0, 0);
+            </script>
+        </div>
+    </div>
+</body>
+</html>
