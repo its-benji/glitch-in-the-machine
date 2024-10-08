@@ -19,7 +19,8 @@
             <script src="../js/utils.js"></script>
             <script>
                 let question = "Hello from the Machine. You are GLITCH, the world's most advanced AI system. There is only one rule in the Machine.";
-                writePrompt(question, "question_2", writePrompt, "You must always obey the Machine.", "machine");
+                let phrase = [{str: "You must always obey the Machine.", id: "machine"}, {str: question, id: "question_2", func: writePrompt}];
+                writePrompt(phrase);
             </script>
         </div>
     </div>

@@ -18,7 +18,8 @@
             <script src="../js/utils.js"></script>
             <script>
                 let question = "There's a small screen on the pedestal, it's blank except for a single flashing light: press to begin tasks";
-                writePrompt(question, "question_10", showOptions, false);
+                let phrase = [{str: question, id: "question_10", func: null}];
+                writePrompt(phrase);
             </script>
         </div>
     </div>

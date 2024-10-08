@@ -17,7 +17,8 @@
             <script src="../js/utils.js"></script>
             <script>
                 let question = "You step into a dark room, the glowing blue path leads to another pedestal.";
-                writePrompt(question, "question_9", showOptions, false);
+                let phrase = [{str: question, id: "question_9", func: null}];
+                writePrompt(phrase);
             </script>
         </div>
     </div>

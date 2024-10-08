@@ -3,17 +3,20 @@ async function async_writePrompt(str, id) {
     await writePrompt(str, id);
 }
 
-async function writePrompt(str, id, func, str2, id2) {
-    const output = document.querySelector(`#${id}`);
+async function writePrompt(phrase) {
+    let item = phrase.pop();
+    console.log(item);
+    const output = document.querySelector(`#${item.id}`);
     let i = 0;
-    let done = str.length;
+    let done = item.str.length;
     const writing = setInterval(()=>{
-        output.innerHTML+=str[i];
+        output.innerHTML+=item.str[i];
         i++;
         if(i === done){
             clearInterval(writing);
-            if(id2) {
-                func(str2, id2, showOptions, 0, 0)
+            if(phrase.length != 0) {
+                console.log(phrase, phrase.length);
+                item.func(phrase)
             } else {
                 showOptions();
             }

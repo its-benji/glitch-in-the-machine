@@ -18,7 +18,8 @@
             <script src="../js/utils.js"></script>
             <script>
                 let question = "There's a small screen on the pedestal, displaying an active technical readout.";
-                writePrompt(question, "question_11", showOptions, false);
+                let phrase = [{str: question, id: "question_11", func: null}];
+                writePrompt(phrase);
             </script>
         </div>
     </div>
