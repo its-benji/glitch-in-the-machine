@@ -1,4 +1,4 @@
-const default_speed = 300;
+const default_speed = 30;
 
 const recordChoice = (options, q) => {
     options.forEach(option => {
