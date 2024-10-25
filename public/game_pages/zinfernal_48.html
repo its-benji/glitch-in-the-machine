@@ -1,0 +1,30 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="question_48" class="question_txt"></div>
+            <ul id="options">
+                <li><a href="zinfernal_49.html" class="option_txt">press on</a></li>
+                <li>
+                    <a href="processing_9.html" class="option_txt" style="color: darkturquoise;">return to processing room</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let question = "The humming grows louder. The data-files beside you have changed: they're mechanized now, passing their gears creaking and stiring as the data-stores are passed along their conveyer belts. It's a while before your vision begins to shimmer again - when it does, it's more violent then the last time.";
+                let phrase = [{str: question, id: "question_48", func: null}];
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_48');
+            </script>
+        </div>
+    </div>
+</body>
+</html>

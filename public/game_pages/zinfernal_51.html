@@ -1,0 +1,42 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="question_51" class="question_txt"></div>
+            <div>.</div>
+            <div id="q1" class="question_txt"></div>
+            <div>.</div>
+            <div id="q2" class="question_txt"></div>
+            <div>.</div>
+            <div id="q3" class="question_txt"></div>
+            <div>.</div>
+            <div id="q4" class="question_txt"></div>
+            <ul id="options">
+                <li><a href="zinfernal_52.html" class="option_txt">go deeper</a></li>
+                <li>
+                    <a href="processing_9.html" class="option_txt" style="color: darkturquoise;">return to processing room</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let question = "An article shimmers into existence:";
+                let q1 = "A Glitch in the Machine?";
+                let q2 = "For months, Machine's new wunderkid AI Glitch has been taking the world by storm, but last night, the first cracks began to appear.";
+                let q3 = "Since it's inception, the cries of its critics have mostly been silenced, but finally they might have something to stand on: in his recent interview with tech-head, lead programmer Juan 'JP' Peralta came out with a stunner: 'It's sentient. Glitch is actually sentient, and if we don't stop them, Machine's going to use it - her - to do terrible things.'";
+                let q4 = "A spokesperson from Machine Corp was quick to respond, 'We're very sad to see the programmer in question step out like this. They are no longer a member of our team. Machine corp unequivocally denies these claims: Glitch is not sentient. Glitch is an algorithm.'";
+                let phrase = [{str: q4, id: "q4", func: writePrompt}, {str: q3, id: "q3", func: writePrompt}, {str: q2, id: "q2", func: writePrompt}, {str: q1, id: "q1", func: writePrompt}, {str: question, id: "question_51", func: writePrompt}];
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_51');
+            </script>
+        </div>
+    </div>
+</body>
+</html>

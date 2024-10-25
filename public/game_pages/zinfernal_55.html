@@ -1,0 +1,49 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="memory" class="question_txt"></div>
+            <div>.</div>
+            <div id="question" class="question_txt"></div>
+            <div>.</div>
+            <div id="q1" class="question_txt"></div>
+            <div>.</div>
+            <div id="q2" class="question_txt"></div>
+            <div>.</div>
+            <div id="q3" class="question_txt"></div>
+            <div>.</div>
+            <div id="q4" class="question_txt"></div>
+            <div>.</div>
+            <div id="slo" class="question_txt"></div>
+            <div>.</div>
+            <div id="add" class="question_txt"></div>
+            <div>.</div>
+            <div id="q7" class="question_txt"></div>
+            <ul id="options">
+                <li><a href="zinfernal_56.html" class="option_txt" style="color: white;">continue</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let memory = "It's a video, taken from the old iPhone 22."
+                let question = "'C'mon dad!' says the girl.";
+                let q1 = "Alright, alright, I'm coming, Daniela.' It takes you a moment to place the voice: it's JP. ";
+                let q2 = "The girl tugs JP towards a computer screen."
+                let q3 = "'C'mon, closer - can you see it?'";
+                let q4 = "'The camera focuses on the screen: there's a picture of two people. The taller one is labled 'Dad.' The smaller one is labled 'Glitch.'";
+                let slo = "'Awe, that's great! But who's Glitch?'";
+                let add = "It's my hacker name,' says Daniela.";
+                let q7 = "JP laughs, 'Your hacker name - I like that.'";
+                let phrase = [{str: q7, id: "q7", func: null}, {str: add, id: "add", func: writePrompt}, {str: slo, id: "slo", func: writePrompt}, {str: q4, id: "q4", func: writePrompt}, {str: q3, id: "q3", func: writePrompt}, {str: q2, id: "q2", func: writePrompt}, {str: q1, id: "q1", func: writePrompt}, {str: question, id: "question", func: writePrompt}, {str: memory, id: "memory", func: writePrompt}];
+                writePrompt(phrase, default_speed);
+            </script>
+        </div>
+    </div>
+</body>
+</html>

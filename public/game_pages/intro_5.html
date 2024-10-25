@@ -8,18 +8,22 @@
 <body>
     <div class="background">
         <div class="game_frame">
+            <div>.</div>
             <div id="question_5" class="question_txt"></div>
             <ul id="options">
                 <li><a href="intro_6.html" class="option_txt">look inside</a></li>
                 <li>
-                    <a href="intro_8.html" class="option_txt" style="color: rgba(37, 204, 226, 0.884);">return to the path</a>
+                    <a href="intro_8.html" class="option_txt" style="color: darkturquoise;">return to the path</a>
                 </li>
             </ul>
             <script src="../js/utils.js"></script>
             <script>
                 let question = "In the far corner of the room, you come across a crack in the wall.";
                 let phrase = [{str: question, id: "question_5"}];
-                writePrompt(phrase);
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_5');
             </script>
         </div>
     </div>

@@ -8,18 +8,27 @@
 <body>
     <div class="background">
         <div class="game_frame">
-            <div id="question_4" class="question_txt"></div>
+            <div>.</div>
+            <div id="question_4" class="question_txt" style="color: darkturquoise;"></div>
+            <div>.</div>
+            <div id="remember" style="color: rgba(246, 249, 250, 0.884);"></div>
+            <div>.</div>
+            <div id="machine" style="color: darkturquoise;"></div>
             <ul id="options">
                 <li>
-                    <a href="intro_8.html" class="option_txt" style="color: rgba(37, 204, 226, 0.884);">follow the path</a>
+                    <a href="intro_8.html" class="option_txt" style="color: darkturquoise;">follow the path</a>
                 </li>
                 <li><a href="intro_5.html" class="option_txt">explore room</a></li>
             </ul>
             <script src="../js/utils.js"></script>
             <script>
+                console.log(sessionStorage.getItem('logs'));
                 let question = "Follow the path to the next stage to complete your tasks.";
-                let phrase = [{str: question, id: "question_4"}];
-                writePrompt(phrase);
+                let phrase = [{str: "You must always obey the Machine.", id: "machine"}, {str: "And remember . . .", id: "remember", func: writePrompt}, {str: question, id: "question_4", func: writePrompt}];
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_4');
             </script>
         </div>
     </div>

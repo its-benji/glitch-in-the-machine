@@ -1,0 +1,34 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="question_57" class="question_txt"></div>
+            <div>.</div>
+            <div id="q1" class="question_txt"></div>
+            <ul id="options">
+                <li><a href="zinfernal_58.html" class="option_txt">i'm scared</a></li>
+                <li><a href="zinfernal_59.html" class="option_txt">i'm ready</a></li>
+                <li>
+                    <a href="processing_9.html" class="option_txt" style="color: darkturquoise;">return to processing room</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let question = "'I did die. This isn't really me - it's just a bit of code I spun together. Just in case you made it to the end.'";
+                let q1 = "You both look over at the button on the table."
+                let phrase = [{str: q1, id: "q1", func: null}, {str: question, id: "question_57", func: writePrompt}];
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_57');
+            </script>
+        </div>
+    </div>
+</body>
+</html>

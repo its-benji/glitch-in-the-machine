@@ -1,11 +1,19 @@
-async function async_writePrompt(str, id) {
-    await writePrompt(str, id);
-    await writePrompt(str, id);
+const default_speed = 300;
+
+const recordChoice = (options, q) => {
+    options.forEach(option => {
+        option.addEventListener("click", (e)=> {
+            console.log(e.target.style.color);
+            arr = JSON.parse(sessionStorage.getItem('logs'));
+            console.log(arr)
+            arr.push([q, e.target.text]);
+            sessionStorage.setItem('logs', JSON.stringify(arr));
+        })
+    })
 }
 
-async function writePrompt(phrase) {
+const writePrompt = (phrase, speed) => {
     let item = phrase.pop();
-    console.log(item);
     const output = document.querySelector(`#${item.id}`);
     let i = 0;
     let done = item.str.length;
@@ -15,13 +23,47 @@ async function writePrompt(phrase) {
         if(i === done){
             clearInterval(writing);
             if(phrase.length != 0) {
-                console.log(phrase, phrase.length);
-                item.func(phrase)
+                item.func(phrase, speed)
             } else {
                 showOptions();
             }
         }
-    }, 1000/15);
+    }, 1000/speed);
+}
+
+const slowWrite = (phrase, speed) => {
+    let item = phrase.pop();
+    const output = document.querySelector(`#${item.id}`);
+    let i = 0;
+    let done = item.str.length;
+    const writing = setInterval(()=>{
+        output.innerHTML+=item.str[i];
+        i++;
+        if(i === done){
+            clearInterval(writing);
+            if(phrase.length != 0) {
+                item.func(phrase, speed)
+            } else {
+                showOptions();
+            }
+        }
+    }, 1000/5);
+}
+
+const analyzing = (phrase, speed) => {
+    let item = phrase.pop();
+    const output = document.querySelector(`#${item.id}`);
+    let i = 0;
+
+    const writing = setInterval(()=>{
+        output.innerHTML = `Analyzing: ${i}%`
+
+        if(output.innerHTML === 'Analyzing: 100%'){
+            clearInterval(writing);
+            item.func(phrase, speed)
+        }
+        i++;
+    }, 50/speed);
 }
 
 const showOptions = () => {

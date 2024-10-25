@@ -8,17 +8,21 @@
 <body>
     <div class="background">
         <div class="game_frame">
-            <div id="question_3" class="question_txt"></div>
+            <div>.</div>
+            <div id="question_3" class="question_txt" style="color: darkturquoise;"></div>
             <ul id="options">
                 <li>
-                    <a href="intro_4.html" class="option_txt" style="color: rgba(37, 204, 226, 0.884);">continue</a></li>
-                <li><a href="intro_2.html" class="option_txt">ignore</a></li>
+                    <a href="intro_4.html" class="option_txt" style="color: darkturquoise;">continue</a></li>
+                <li><a href="intro_2.html" class="option_txt" style="color: white;">ignore</a></li>
             </ul>
             <script src="../js/utils.js"></script>
             <script>
                 let question = "During each cycle, you will be presented with a set of important tasks to complete for the Machine.";
                 let phrase = [{str: question, id: "question_3"}];
-                writePrompt(phrase);
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_3');
             </script>
         </div>
     </div>

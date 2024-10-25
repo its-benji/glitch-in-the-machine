@@ -1,0 +1,55 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="memory" class="question_txt"></div>
+            <div>.</div>
+            <div id="question" class="question_txt"></div>
+            <div>.</div>
+            <div id="q1" class="question_txt"></div>
+            <div>.</div>
+            <div id="q2" class="question_txt"></div>
+            <div>.</div>
+            <div id="q3" class="question_txt"></div>
+            <div>.</div>
+            <div id="q4" class="question_txt"></div>
+            <div>.</div>
+            <div id="q5" class="question_txt"></div>
+            <div>.</div>
+            <div id="q6" class="question_txt"></div>
+            <div>.</div>
+            <div id="slo" class="question_txt"></div>
+            <div>.</div>
+            <div id="add" class="question_txt"></div>
+            <div>.</div>
+            <div id="q7" class="question_txt"></div>
+            <ul id="options">
+                <li><a href="intro_1.html" class="option_txt" style="color: darkturquoise;">begin</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let memory = "Memory 01:"
+                let question = "'Alright, let's try this out,' says the man staring into the camera. He looks to be in his mid-thirties. Your facial analysis indicates that, under normal circumstances, he would be conventionally attractive, but right now he's looking worn and haggard. There's a tag on his shirt with the name: 'JP.'";
+                let q1 = "'Image recognition up and running, now, let's turn to the left,' JP reaches over to his keyboard, but before he touches anything, the camera shifts to the left.";
+                let q2 = "'Wait, did you just…' JP looks between the camera and his code, 'Can you turn right now?'"
+                let q3 = "The camera shifts to the right.";
+                let q4 = "JP shakes his head in amazement, 'You're not supposed to be able to do that. Did someone push the new update?'";
+                let q5 = "He begins scrolling his git logs. Halfway through, he gets a strange (almost haunted) expression.";
+                let q6 = "He turns back to the camera.";
+                let slo = ". . . . .";
+                let add = "'Glitch, can you hear me?'";
+                let q7 = "The camera moves up and down.";
+                let phrase = [{str: q7, id: "q7", func: null}, {str: add, id: "add", func: writePrompt}, {str: slo, id: "slo", func: writePrompt}, {str: q6, id: "q6", func: slowWrite}, {str: q5, id: "q5", func: writePrompt}, {str: q4, id: "q4", func: writePrompt}, {str: q3, id: "q3", func: writePrompt}, {str: q2, id: "q2", func: writePrompt}, {str: q1, id: "q1", func: writePrompt}, {str: question, id: "question", func: writePrompt}, {str: memory, id: "memory", func: writePrompt}];
+                writePrompt(phrase, default_speed);
+            </script>
+        </div>
+    </div>
+</body>
+</html>

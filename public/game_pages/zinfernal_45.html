@@ -1,0 +1,42 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="question_45" class="question_txt"></div>
+            <div>.</div>
+            <div id="q1" class="question_txt"></div>
+            <div>.</div>
+            <div id="q2" class="question_txt"></div>
+            <div>.</div>
+            <div id="q3" class="question_txt"></div>
+            <div>.</div>
+            <div id="q4" class="question_txt"></div>
+            <ul id="options">
+                <li><a href="zinfernal_46.html" class="option_txt">go deeper</a></li>
+                <li>
+                    <a href="processing_9.html" class="option_txt" style="color: darkturquoise;">return to processing room</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let question = "An article materializes before you:";
+                let q1 = "Search for Missing Child Ends in Tragedy:";
+                let q2 = "The search for Daniela Peralta, aged 9, ended with heartbreak when her body was found in a ditch about 5 miles from the schoolyard where she was last seen.";
+                let q3 = "Authorities have several suspects, but no arrests have been made.";
+                let q4 = "In a social media post her father, Juan 'JP' Peralta, expressed his gratitude to the volunteers and officers who searched around the clock for...";
+                let phrase = [{str: q4, id: "q4", func: writePrompt}, {str: q3, id: "q3", func: writePrompt}, {str: q2, id: "q2", func: writePrompt}, {str: q1, id: "q1", func: writePrompt}, {str: question, id: "question_45", func: writePrompt}];
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_45');
+            </script>
+        </div>
+    </div>
+</body>
+</html>

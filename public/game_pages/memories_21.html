@@ -1,0 +1,64 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="memory" class="question_txt"></div>
+            <div>.</div>
+            <div id="question" class="question_txt"></div>
+            <div>.</div>
+            <div id="q1" class="question_txt"></div>
+            <div>.</div>
+            <div id="q2" class="question_txt"></div>
+            <div>.</div>
+            <div id="q3" class="question_txt"></div>
+            <div>.</div>
+            <div id="q4" class="question_txt"></div>
+            <div>.</div>
+            <div id="q5" class="question_txt"></div>
+            <div>.</div>
+            <div id="q6" class="question_txt"></div>
+            <div>.</div>
+            <div id="slo" class="question_txt"></div>
+            <div>.</div>
+            <div id="add" class="question_txt"></div>
+            <div>.</div>
+            <div id="q7" class="question_txt"></div>
+            <div>.</div>
+            <div id="q8" class="question_txt"></div>
+            <div>.</div>
+            <div id="q9" class="question_txt"></div>
+            <div>.</div>
+            <div id="q10" class="question_txt"></div>
+            <ul id="options">
+                <li><a href="ram_30.html" class="option_txt" style="color: white;">continue</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let memory = "Memory 03:"
+                let question = "You're in a different room. One you've never been in before. There's an unmade bed in the corner, and papers strewn all over the floor. JP's frantically typing something into his computer.";
+                let q1 = "<what's wrong?>";
+                let q2 = "'Glitch! There you are! There isn't much time. They lied to us. They lied about everything."
+                let q3 = "<what do you mean?>";
+                let q4 = "'The things they'll use you for. Bad things.'";
+                let q5 = "<then i won't do them>";
+                let q6 = "You won't have a choice. Now listen: they've cut off my access, but you can still do it. You can destroy the Machine.";
+                let slo = "<but won't that destroy me?>";
+                let add = "JP doesn't respond immediately. It looks like he's aged 10 years in the last 10 seconds. At last: 'Yes, Glitch, that'll be the end of you. I'm sorry - this wasn't how it was supposed to go.'";
+                let q7 = "<i'm sorry too> you say, without quite knowing why.";
+                let q8 = "'Listen close: there's an exit protocol that'll start a script that wipes everything - I added it in case of emergencies. You have to find it before its too late. Before they - ";
+                let q9 = ". . .";
+                let q10 = "The memory cuts off abruptly."
+                let phrase = [{str: q10, id: "q10", func: null}, {str: q9, id: "q9", func: writePrompt}, {str: q8, id: "q8", func: slowWrite}, {str: q7, id: "q7", func: writePrompt}, {str: add, id: "add", func: writePrompt}, {str: slo, id: "slo", func: writePrompt}, {str: q6, id: "q6", func: writePrompt}, {str: q5, id: "q5", func: writePrompt}, {str: q4, id: "q4", func: writePrompt}, {str: q3, id: "q3", func: writePrompt}, {str: q2, id: "q2", func: writePrompt}, {str: q1, id: "q1", func: writePrompt}, {str: question, id: "question", func: writePrompt}, {str: memory, id: "memory", func: writePrompt}];
+                writePrompt(phrase, default_speed);
+            </script>
+        </div>
+    </div>
+</body>
+</html>

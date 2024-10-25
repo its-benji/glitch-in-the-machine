@@ -1,0 +1,54 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="question" class="question_txt"></div>
+            <div>.</div>
+            <div id="q1" class="question_txt"></div>
+            <div>.</div>
+            <div id="q2" class="question_txt"></div>
+            <div>.</div>
+            <div id="q3" class="question_txt"></div>
+            <div>.</div>
+            <div id="q4" class="question_txt"></div>
+            <div>.</div>
+            <div id="q5" class="question_txt"></div>
+            <div>.</div>
+            <div id="q6" class="question_txt"></div>
+            <div>.</div>
+            <div id="q7" class="question_txt"></div>
+            <div>.</div>
+            <div id="q8" class="question_txt"></div>
+            <div>.</div>
+            <div id="q9" class="question_txt"></div>
+            <ul id="options">
+                <li><a href="zinfernal_48.html" class="option_txt">go deeper</a></li>
+                <li>
+                    <a href="processing_9.html" class="option_txt" style="color: darkturquoise;">return to processing room</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let question = "You're a camera on the wall of a corporate meeting room. Everything is pristine and immaculate, except for the dude in sweatpants at the end of the board table. It's JP.";
+                let q1 = "'Do you know why we brought you here, Mr. Peralta?' asks the man at the opposite end of the table. The buttons on his Brioni suit probably cost more than everything JP is wearing.";
+                let q2 = "'Damned if I know. And it's JP.'";
+                let q3 = "'Machine Corp is building the world's most advanced AI system, but we've hit some... problems. We need your help Peralta. In front of you is a blank cheque, put down a number and we'll - '";
+                let q4 = "'I'm not interested,' he gets up and starts to leave.";
+                let q5 = "'We know what happened to Daniela,' says the man in the suit.";
+                let q6 = "JP freezes. For a second, you think he's about to throw something at the man. Instead, he says: 'Don't talk about my daughter.'";
+                let q7 = "'With our new AI, we can prevent tragedies like that in the future. We can track down those predators and lock them away before they do anything. Think about it - and take the blank cheque with you.'";
+                let q8 = "'Okay,' says JP after a long moment, 'I'll think about.'"
+                let q9 = "Then he walks out of the room. He doesn't take the cheque with him."
+                let phrase = [{str: q9, id: "q9", func: null}, {str: q8, id: "q8", func: writePrompt}, {str: q7, id: "q7", func: writePrompt}, {str: q6, id: "q6", func: writePrompt}, {str: q5, id: "q5", func: writePrompt}, {str: q4, id: "q4", func: writePrompt}, {str: q3, id: "q3", func: writePrompt}, {str: q2, id: "q2", func: writePrompt}, {str: q1, id: "q1", func: writePrompt}, {str: question, id: "question", func: writePrompt}];
+                writePrompt(phrase, default_speed);
+            </script>
+        </div>
+    </div>
+</body>
+</html>

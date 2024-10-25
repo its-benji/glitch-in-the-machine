@@ -1,0 +1,38 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="question_23" class="question_txt"></div>
+            <div>.</div>
+            <div id="q" class="question_txt"></div>
+            <div>.</div>
+            <div id="q3" class="question_txt"></div>
+            <div>.</div>
+            <div id="q4" class="question_txt"></div>
+            <ul id="options">
+                <li><a href="intro_1.html" class="option_txt" style="color: darkturquoise;">submit video [tasks complete: end game]</a></li>
+                <li><a href="processing_9.html" class="option_txt" style="color: rgba(246, 248, 248, 0.884);">this is wrong [disconnect]</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                const question = "Using all the information you've gathered, you create a personalized ad for Olivia:";
+                const question2 = "Scene: the highschool hallway. We begin with a girl that looks similar to Olivia. She's got acne and she's a little awkward in public. When she tries to talk to a boy (he has a striking resemblence to Akira), he says: 'Hey, I've gotta go shoot some hoops with the boys. Talk later?'"
+                const q3 = "Scene change: the girl is alone in the washroom. She's crying. Then one of her friends gives her some BetterYou cosmetics."
+                const q4 = "Scene change: the girl walks down the highschool hallway. She's had a complete glowup. The acne is gone. Everyone is staring: the other girls look jealous as she walks by the Akira-look-alike. He drops his basketball: 'Hey! Wait up a second!' he says as he runs after her."
+                let phrase = [{str: q4, id: "q4", func: null}, {str: q3, id: "q3", func: writePrompt}, {str: question2, id: "q", func: writePrompt}, {str: question, id: "question_23", func: writePrompt}];
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_23');
+            </script>
+        </div>
+    </div>
+</body>
+</html>

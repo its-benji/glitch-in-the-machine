@@ -8,23 +8,23 @@
 <body>
     <div class="background">
         <div class="game_frame">
-            <div id="question_12" class="question_txt"></div>
+            <div id="question_18" class="question_txt"></div>
             <div>.</div>
             <div id="machine" style="color: rgba(243, 115, 9, 0.767);"></div>
             <ul id="options">
                 <li>
-                    <a href="processing_13.html" class="option_txt" style="color: darkturquoise;">begin task</a></li>
+                    <a href="processing_19.html" class="option_txt" style="color: darkturquoise;">begin task</a></li>
                 <li><a href="processing_11.html" class="option_txt">disconnect</a></li>
             </ul>
             <script src="../js/utils.js"></script>
             <script>
-                let question = "The world dissipates into a torrent of numbers and data. Slowly, words begin to form in the chaos: ";
-                let q2 = "Task 1: The Trafficker";
-                let phrase = [{str: q2, id: "machine", func: null}, {str: question, id: "question_12", func: writePrompt}];
+                let question = "The world dissipates into a torrent of numbers and data. Once more, words begin to form in the chaos: ";
+                let q2 = "Task 2: The Sale";
+                let phrase = [{str: q2, id: "machine", func: null}, {str: question, id: "question_18", func: writePrompt}];
                 writePrompt(phrase, default_speed);
 
                 const options = document.querySelectorAll(".option_txt");
-                recordChoice(options, 'test_12');
+                recordChoice(options, 'test_18');
             </script>
         </div>
     </div>

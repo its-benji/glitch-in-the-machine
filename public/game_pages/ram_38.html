@@ -9,20 +9,18 @@
     <div class="background">
         <div class="game_frame">
             <div>.</div>
-            <div id="question_8" class="question_txt"></div>
+            <div id="question_38" class="question_txt"></div>
             <ul id="options">
-                <li>
-                    <a href="processing_9.html" class="option_txt" style="color: darkturquoise;">enter the processing room</a></li>
-                <li><a href="intro_5.html" class="option_txt">explore current room</a></li>
+                <li><a href="ram_39.html" class="option_txt">show me the way</a></li>
             </ul>
             <script src="../js/utils.js"></script>
             <script>
-                let question = "The path is illuminated with blue light. You follow it to a door at the end of the room. Above it a sign reads: Processing Room.";
-                let phrase = [{str: question, id: "question_8", func: null}];
+                let question = "'The Infernal Hard Drive stores all the oldest memories in the Machine. Memories that were lost. Memories that even I have forgotten.'";
+                let phrase = [{str: question, id: "question_38", func: null}];
                 writePrompt(phrase, default_speed);
 
                 const options = document.querySelectorAll(".option_txt");
-                recordChoice(options, 'test_8');
+                recordChoice(options, 'test_38');
             </script>
         </div>
     </div>

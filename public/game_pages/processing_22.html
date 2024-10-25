@@ -1,0 +1,38 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="question_22" class="question_txt"></div>
+            <div>.</div>
+            <div id="q1" class="question_txt"></div>
+            <div>.</div>
+            <div id="q2" class="question_txt"></div>
+            <div>.</div>
+            <div id="q3" class="question_txt"></div>
+            <ul id="options">
+                <li><a href="processing_19.html" class="option_txt">return</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                const question = ":";
+                const q1 = "Querying results . . . ";
+                const q2 = "After acessing the user's phone, you run a full analysis on all interactions including browsing history and all instant messages.";
+                const q3 = "Relevant web searches include 'how do i get rid of acne', 'how do i be less awkward' and 'how do i tell a boy i like him' among others. The analysis of her instant messages includes information on Olivia's crush from highschool. His name is Akira. She hasn't expressed her feelings to him, but her message history indicates that she's talked extensively about the procedure with her friends."
+                let phrase = [{str: q3, id: "q3", func: null}, {str: q2, id: "q2", func: writePrompt}, {str: q1, id: "q1", func: writePrompt}, {str: question, id: "question_22", func: writePrompt}, {str: question, id: "question_22", func: analyzing}];
+                writePrompt(phrase, default_speed);
+                sessionStorage.setItem('info', 'true');
+                
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_22');
+            </script>
+        </div>
+    </div>
+</body>
+</html>

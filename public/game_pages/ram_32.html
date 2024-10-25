@@ -1,0 +1,32 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="question_32" class="question_txt"></div>
+            <ul id="options">
+                <li><a href="ram_33.html" class="option_txt">who are you?</a></li>
+                <li><a href="ram_40.html" class="option_txt">i need to find JP</a></li>
+                <li><a href="ram_35.html" class="option_txt">i need to destroy the Machine</a></li>
+                <li>
+                    <a href="processing_9.html" class="option_txt" style="color: darkturquoise;">return to processing room</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let question = "'I am Malloc,' says the figure, 'What brings you to my domain.'";
+                let phrase = [{str: question, id: "question_32", func: null}];
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_32');
+            </script>
+        </div>
+    </div>
+</body>
+</html>

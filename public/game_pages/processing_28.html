@@ -1,0 +1,38 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="question_28" class="question_txt"></div>
+            <ul id="options">
+                <li><a id='open'></a></li>
+                <li><a href="processing_9.html" class="option_txt" style="color: darkturquoise;">return to path</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                const question = "The rest of the room appears to be empty except for a door on the far wall. Above it reads: Random Access Memories.";
+                let phrase = [{str: question, id: "question_28", func: null}];
+                writePrompt(phrase, default_speed);
+
+                console.log(sessionStorage.getItem('auth'))
+                const container = document.getElementById('open');
+                if (sessionStorage.getItem('auth') === 'true') {
+                    console.log('runs', sessionStorage.getItem('auth'))
+                    container.innerHTML = '<a href="memories_20.html" class="option_txt" style="color:white;">open door</a>';
+                } else {
+                    container.innerHTML = '<a href="processing_29.html" class="option_txt" style="color:white;">open door</a>';
+                }
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_28');
+            </script>
+        </div>
+    </div>
+</body>
+</html>

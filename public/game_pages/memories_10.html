@@ -9,20 +9,20 @@
     <div class="background">
         <div class="game_frame">
             <div>.</div>
-            <div id="question_8" class="question_txt"></div>
+            <div id="question_3" class="question_txt" style="color: white;"></div>
             <ul id="options">
+                <li><a href="memories_11.html" class="option_txt" style="color: white;">view memory</a></li>
                 <li>
-                    <a href="processing_9.html" class="option_txt" style="color: darkturquoise;">enter the processing room</a></li>
-                <li><a href="intro_5.html" class="option_txt">explore current room</a></li>
+                    <a href="processing_9.html" class="option_txt" style="color: darkturquoise;">ignore</a></li>
             </ul>
             <script src="../js/utils.js"></script>
             <script>
-                let question = "The path is illuminated with blue light. You follow it to a door at the end of the room. Above it a sign reads: Processing Room.";
-                let phrase = [{str: question, id: "question_8", func: null}];
+                let question = "As you step through the door, you feel a strange jarring sensation. A warning flashes across your visual interface: Rogue Memory Detected.";
+                let phrase = [{str: question, id: "question_3"}];
                 writePrompt(phrase, default_speed);
 
                 const options = document.querySelectorAll(".option_txt");
-                recordChoice(options, 'test_8');
+                recordChoice(options, 'test_05');
             </script>
         </div>
     </div>

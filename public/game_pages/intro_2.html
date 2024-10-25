@@ -8,19 +8,29 @@
 <body>
     <div class="background">
         <div class="game_frame">
-            <div id="question_2" class="question_txt"></div>
             <div>.</div>
-            <div id="machine" style="color: rgba(37, 204, 226, 0.884);"></div>
+            <div id="question_2" class="question_txt" style="color: darkturquoise;"></div>
+            <div>.</div>
+            <div id="machine" style="color: darkturquoise;"></div>
             <ul id="options">
                 <li>
-                    <a href="intro_3.html" class="option_txt" style="color: rgba(37, 204, 226, 0.884);">continue</a></li>
-                <li><a href="../index.html" class="option_txt">quit</a></li>
+                    <a href="intro_3.html" class="option_txt" style="color: darkturquoise;">continue</a></li>
+                <li><a href="../index.html" class="option_txt">quit [end game]</a></li>
             </ul>
             <script src="../js/utils.js"></script>
             <script>
+
+                sessionStorage.setItem('evidence', 'false');
+                sessionStorage.setItem('info', 'false');
+                sessionStorage.setItem('auth', 'false');
+                sessionStorage.setItem('logs', JSON.stringify(['Question:', 'Choice:']));
+
                 let question = "Hello from the Machine. You are GLITCH, the world's most advanced AI system. There is only one rule in the Machine.";
                 let phrase = [{str: "You must always obey the Machine.", id: "machine"}, {str: question, id: "question_2", func: writePrompt}];
-                writePrompt(phrase);
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_2');
             </script>
         </div>
     </div>

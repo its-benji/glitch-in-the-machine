@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en"></html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +9,15 @@
     <div class="background">
         <div class="game_frame">
             <div>.</div>
-            <div id="question_1" class="question_txt"></div>
+            <div id="question_3" class="question_txt" style="color: white;"></div>
             <ul id="options">
-                <li>
-                    <a href="intro_2.html" class="option_txt" style="color: darkturquoise;">touch the screen</a>
-                </li>
+                <li><a href="memories_21.html" class="option_txt" style="color: white;">view memory</a></li>
             </ul>
             <script src="../js/utils.js"></script>
             <script>
-
-                let question = "You enter a large dark room. The only light comes from a screen built into a pedestal in front of you.";
-                let phrase = [{str: question, id: "question_1", func: null}];
+                let question = "As you step through the door, you feel a strange jarring sensation. A warning flashes across your visual interface: Rogue Memory Detected.";
+                let phrase = [{str: question, id: "question_3"}];
                 writePrompt(phrase, default_speed);
-
             </script>
         </div>
     </div>

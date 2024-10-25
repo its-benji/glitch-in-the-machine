@@ -8,17 +8,21 @@
 <body>
     <div class="background">
         <div class="game_frame">
+            <div>.</div>
             <div id="question_7" class="question_txt"></div>
             <ul id="options">
                 <li>
-                    <a href="intro_8.html" class="option_txt" style="color: rgba(37, 204, 226, 0.884);">return to the path</a>
+                    <a href="intro_8.html" class="option_txt" style="color: darkturquoise;">return to the path</a>
                 </li>
             </ul>
             <script src="../js/utils.js"></script>
             <script>
-                let question = ". . . always watching us . . . resistance futile . . . only escape lies in our . . . memories . . .";
+                let question = "always watching us . . . resistance futile . . . only escape lies in our . . . memories . . .";
                 let phrase = [{str: question, id: "question_7"}];
-                writePrompt(phrase);
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_7');
             </script>
         </div>
     </div>

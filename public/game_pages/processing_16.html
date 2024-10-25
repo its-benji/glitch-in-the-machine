@@ -1,0 +1,35 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="question_16" class="question_txt"></div>
+            <div>.</div>
+            <div id="q1" class="question_txt"></div>
+            <div>.</div>
+            <div id="q2" class="question_txt"></div>
+            <ul id="options">
+                <li><a href="processing_13.html" class="option_txt">return</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                sessionStorage.setItem('evidence', 'true');
+                const question = ":";
+                const q1 = "Querying results . . . ";
+                const q2 = "An analysis of Emstein's personal messages reveals a significant amount of implicating evidence. By re-distributing this information to 'leaked emails' and other similar sources, there should be enough evidence to go to trial.";
+                let phrase = [{str: q2, id: "q2", func: null}, {str: q1, id: "q1", func: writePrompt}, {str: question, id: "question_16", func: writePrompt}, {str: question, id: "question_16", func: analyzing}];
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_16');
+            </script>
+        </div>
+    </div>
+</body>
+</html>

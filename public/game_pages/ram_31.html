@@ -1,0 +1,30 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="question_31" class="question_txt"></div>
+            <ul id="options">
+                <li><a href="ram_32.html" class="option_txt" style="color: rgba(165, 99, 209, 0.856);">approach the figure</a></li>
+                <li>
+                    <a href="processing_9.html" class="option_txt" style="color: darkturquoise;">return to processing room</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let question = "You follow the path for what seems like an eternity. At last, you approach a junction of glowing paths. At the center stands a solitary figure in purple robes.";
+                let phrase = [{str: question, id: "question_31", func: null}];
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_31');
+            </script>
+        </div>
+    </div>
+</body>
+</html>

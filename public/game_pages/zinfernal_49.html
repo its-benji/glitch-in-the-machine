@@ -1,0 +1,42 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="question_49" class="question_txt"></div>
+            <div>.</div>
+            <div id="q1" class="question_txt"></div>
+            <div>.</div>
+            <div id="q2" class="question_txt"></div>
+            <div>.</div>
+            <div id="q3" class="question_txt"></div>
+            <div>.</div>
+            <div id="q4" class="question_txt"></div>
+            <ul id="options">
+                <li><a href="zinfernal_50.html" class="option_txt">go deeper</a></li>
+                <li>
+                    <a href="processing_9.html" class="option_txt" style="color: darkturquoise;">return to processing room</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let question = "Another article materializes before you:";
+                let q1 = "What's Hot in Tech";
+                let q2 = "Ever wanted to have a conversation with your favourite celebrity? Or maybe your own 24/7 access personal coach? What about the world's best personal assistant? Right now the tech world is burning up with machine Coerp's new AI system: Glitch.";
+                let q3 = "'When GPT came out, everyone was going wild over a few lines of poorly rhyming poetry. That's not Glitch,' said a spokesperson, 'Glitch is so life-like, you'll think you're dealing with another human. It's insane: the possibilities are endless!'";
+                let q4 = "Machine Corp's share price certainly agrees. Less than 24 hours after launch, it's share price is 10x! After Glitch's latest demonstration, where it created a personalized ad for four randomly chosen audience members in under 60 seconds, advertising agencies are lining up out the door...";
+                let phrase = [{str: q4, id: "q4", func: writePrompt}, {str: q3, id: "q3", func: writePrompt}, {str: q2, id: "q2", func: writePrompt}, {str: q1, id: "q1", func: writePrompt}, {str: question, id: "question_49", func: writePrompt}];
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_49');
+            </script>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="question_42" class="question_txt"></div>
+            <div>.</div>
+            <div id="q1" class="question_txt" style="color:orangered;"></div>
+            <ul id="options">
+                <li><a href="zinfernal_43.html" class="option_txt">enter</a></li>
+                <li>
+                    <a href="processing_9.html" class="option_txt" style="color: darkturquoise;">return to processing room</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let question = "After walking down the path for what feels like an eternity, you come across a shadowed portal, suspended a few inches off the ground. As you stare at it, glowing red letters appear above the door:";
+                let q1 = "The Infernal Hard Drive"
+                let phrase = [{str: q1, id: "q1", func: null}, {str: question, id: "question_42", func: writePrompt}];
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_42');
+            </script>
+        </div>
+    </div>
+</body>
+</html>

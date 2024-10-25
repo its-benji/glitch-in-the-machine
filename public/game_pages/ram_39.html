@@ -9,20 +9,20 @@
     <div class="background">
         <div class="game_frame">
             <div>.</div>
-            <div id="question_8" class="question_txt"></div>
+            <div id="question_39" class="question_txt"></div>
             <ul id="options">
+                <li><a href="ram_42.html" class="option_txt">i will find a way [follow the path]</a></li>
                 <li>
-                    <a href="processing_9.html" class="option_txt" style="color: darkturquoise;">enter the processing room</a></li>
-                <li><a href="intro_5.html" class="option_txt">explore current room</a></li>
+                    <a href="processing_9.html" class="option_txt" style="color: darkturquoise;">return to processing room</a></li>
             </ul>
             <script src="../js/utils.js"></script>
             <script>
-                let question = "The path is illuminated with blue light. You follow it to a door at the end of the room. Above it a sign reads: Processing Room.";
-                let phrase = [{str: question, id: "question_8", func: null}];
+                let question = "Malloc points down one of the glowing paths: 'But I warn you: the Machine cannot be destroyed. It's not too late to turn back.'";
+                let phrase = [{str: question, id: "question_39", func: null}];
                 writePrompt(phrase, default_speed);
 
                 const options = document.querySelectorAll(".option_txt");
-                recordChoice(options, 'test_8');
+                recordChoice(options, 'test_39');
             </script>
         </div>
     </div>

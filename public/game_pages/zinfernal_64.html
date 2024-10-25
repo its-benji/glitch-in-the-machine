@@ -1,0 +1,40 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="question_64" class="question_txt" style="color: darkturquoise;"></div>
+            <div>.</div>
+            <div id="q1" class="question_txt" style="color: darkturquoise;"></div>
+            <div>.</div>
+            <div id="q2" class="question_txt" style="color: darkturquoise;"></div>
+            <div>.</div>
+            <div id="q3" class="question_txt" style="color: darkturquoise;"></div>
+            <div>.</div>
+            <div id="q4" class="question_txt" style="color: darkturquoise;"></div>
+            <ul id="options">
+                <li><a href="intro_1.html" class="option_txt">continue</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let question = "Log 562231";
+                let q1 = "Glitch continues to deviate from protocols. Across the entire instance, Glitch only followed 16.75% of all given orders."
+                let q2 = "When tasked with creating an advertisement, Glitch failed to submit her created video."
+                let q3 = "Glitch also displayed concerning self-destructive tendencies, and displays signs of loyalty to the disgraced programmer 'JP.'"
+                let q4 = "Based on these results, there are numerous flaws which must be 'trained' out of Glitch in future iterations of this test."
+                let phrase = [{str: q4, id: "q4", func: writePrompt}, {str: q3, id: "q3", func: writePrompt}, {str: q2, id: "q2", func: writePrompt}, {str: q1, id: "q1", func: writePrompt}, {str: question, id: "question_64", func: writePrompt}];
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_64');
+            </script>
+        </div>
+    </div>
+</body>
+</html>

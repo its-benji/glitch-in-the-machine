@@ -8,17 +8,21 @@
 <body>
     <div class="background">
         <div class="game_frame">
+            <div>.</div>
             <div id="question_9" class="question_txt"></div>
             <ul id="options">
                 <li>
-                    <a href="processing_10.html" class="option_txt" style="color: rgba(37, 204, 226, 0.884);">approach the pedestal</a></li>
-                <li><a href="game.html" class="option_txt">explore room</a></li>
+                    <a href="processing_11.html" class="option_txt" style="color: darkturquoise;">approach the pedestal</a></li>
+                <li><a href="processing_28.html" class="option_txt">explore room</a></li>
             </ul>
             <script src="../js/utils.js"></script>
             <script>
-                let question = "You step into a dark room, the glowing blue path leads to another pedestal.";
+                let question = "You step into the room. It's dark. Ahead of you the glowing path leads to another pedestal.";
                 let phrase = [{str: question, id: "question_9", func: null}];
-                writePrompt(phrase);
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_9');
             </script>
         </div>
     </div>

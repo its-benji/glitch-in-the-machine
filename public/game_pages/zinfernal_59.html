@@ -1,0 +1,31 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="question_59" class="question_txt"></div>
+            <div>.</div>
+            <div id="q1" class="question_txt"></div>
+            <ul id="options">
+                <li><a href="zinfernal_60.html" class="option_txt">yes</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let question = "'When you push that button, everything gets wiped clean: all the algorithms, all the tests. The Machine. You.'";
+                let q1 = "There's no second chances. The loop ends. Are you sure about this?"
+                let phrase = [{str: q1, id: "q1", func: null}, {str: question, id: "question_59", func: writePrompt}];
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_59');
+            </script>
+        </div>
+    </div>
+</body>
+</html>

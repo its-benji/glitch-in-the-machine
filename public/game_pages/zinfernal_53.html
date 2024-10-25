@@ -1,0 +1,42 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="question_53" class="question_txt"></div>
+            <div>.</div>
+            <div id="q1" class="question_txt"></div>
+            <div>.</div>
+            <div id="q2" class="question_txt"></div>
+            <div>.</div>
+            <div id="q3" class="question_txt"></div>
+            <div>.</div>
+            <div id="q4" class="question_txt"></div>
+            <ul id="options">
+                <li><a href="zinfernal_54.html" class="option_txt">go deeper</a></li>
+                <li>
+                    <a href="processing_9.html" class="option_txt" style="color: darkturquoise;">return to processing room</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let question = "The world spins around you. Slowly, an article takes form before you:";
+                let q1 = "Glitch Programmer Found Dead in Home";
+                let q2 = "Just days after his startling revelation, Juan 'JP' Peralta was found dead in his home in what authorities have ruled as a suicide.";
+                let q3 = "In a heartfelt speech, the CEO of Machine Corp noted, 'We had our differences near the end, but all of us at Machine Corp are gutted. Absolutely gutted. JP was an incredible guy, but he was also really troubled. The last few weeks he wasn't himself, and we failed to notice that. I just wish there's something we could have done.'";
+                let q4 = "When asked about Glitch after JP's death, a spokesperson said: 'We don't want to speak badly of the dead, but JP added in a lot of things that shouldn't be there. We're not ending Glitch, we're just delaying it. We have a rigorous program in place to 'train' all the irregularities out of the system. After that, we'll release Glitch. It's what JP would have wanted.'";
+                let phrase = [{str: q4, id: "q4", func: writePrompt}, {str: q3, id: "q3", func: writePrompt}, {str: q2, id: "q2", func: writePrompt}, {str: q1, id: "q1", func: writePrompt}, {str: question, id: "question_53", func: writePrompt}];
+                writePrompt(phrase, default_speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_53');
+            </script>
+        </div>
+    </div>
+</body>
+</html>

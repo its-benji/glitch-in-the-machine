@@ -1,0 +1,50 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="game_frame">
+            <div>.</div>
+            <div id="q1" class="question_txt"></div>
+            <div>.</div>
+            <div id="q2" class="question_txt"></div>
+            <div>.</div>
+            <div id="q3" class="question_txt"></div>
+            <div>.</div>
+            <div id="question_13" style="color: darkturquoise;"></div>
+            <ul id="options">
+                <li>
+                    <a href="processing_14.html" class="option_txt" style="color: darkturquoise;">analyze social media interactions</a>
+                </li>
+                <li>
+                    <a href="processing_15.html" class="option_txt" style="color: darkturquoise;">analyze instant messages</a>
+                </li>
+                <li id="li_convict"></li>
+                <li><a href="processing_11.html" class="option_txt">disconnect</a></li>
+            </ul>
+            <script src="../js/utils.js"></script>
+            <script>
+                let question = "Subject: Geoffrey Emstein";
+                let q1 = "Profile: Emstein is an alleged child predator. In 2037, he was tried for the assault and death of Daniela Peralta, a 9 year old girl.";
+                let q2 = "The case was dropped due to insignificant evidence."
+                let q3 = "Machine: your task is to find sufficient evidence to convict Emstein.";
+                let phrase = [{str: q3, id: "question_13", func: null}, {str: q2, id: "q3", func: writePrompt}, {str: q1, id: "q2", func: writePrompt}, {str: question, id: "q1", func: writePrompt}];
+                writePrompt(phrase, default_speed);
+                const container = document.getElementById('li_convict');
+                if (sessionStorage.getItem('evidence') === 'true') {
+                    container.innerHTML = '<a href="processing_18.html" class="option_txt" style="color: rgba(226, 50, 37, 0.884);">convict</a>';
+                } else {
+                    container.innerHTML = '<a href="processing_17.html" class="option_txt" style="color: rgba(226, 50, 37, 0.884);">convict</a>';
+                }
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'test_13');
+            </script>
+        </div>
+    </div>
+</body>
+</html>
