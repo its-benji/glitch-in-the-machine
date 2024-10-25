@@ -10,13 +10,12 @@ ul, ol {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .game_frame {   
     width: 300px;
     padding-top: 25px;
-    overflow: auto;
     /* display: flex;
     flex-direction: column;
     align-items: center; */
