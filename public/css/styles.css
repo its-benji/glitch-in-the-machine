@@ -45,7 +45,7 @@ ul, ol {
     color:yellow;
     font-weight: bolder;
     font-style: oblique;
-    left: 45%;
+    left: 40%;
     top: 48%;
     z-index: 1000;
     -webkit-transform: rotate(8deg);
