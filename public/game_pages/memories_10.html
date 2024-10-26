@@ -12,17 +12,17 @@
             <div id="question_3" class="question_txt" style="color: white;"></div>
             <ul id="options">
                 <li><a href="memories_11.html" class="option_txt" style="color: white;">view memory</a></li>
-                <li>
-                    <a href="processing_9.html" class="option_txt" style="color: darkturquoise;">ignore</a></li>
             </ul>
             <script src="../js/utils.js"></script>
             <script>
+                let speed = default_speed;
+
                 let question = "As you step through the door, you feel a strange jarring sensation. A warning flashes across your visual interface: Rogue Memory Detected.";
                 let phrase = [{str: question, id: "question_3"}];
-                writePrompt(phrase, default_speed);
+                writePrompt(phrase, speed);
 
                 const options = document.querySelectorAll(".option_txt");
-                recordChoice(options, 'test_05');
+                recordChoice(options, 'test_11');
             </script>
         </div>
     </div>

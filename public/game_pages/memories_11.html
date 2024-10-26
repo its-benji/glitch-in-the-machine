@@ -45,6 +45,12 @@
             </ul>
             <script src="../js/utils.js"></script>
             <script>
+                let speed = default_speed;
+                let test = sessionStorage.getItem('logs');
+
+                if(sessionStorage.getItem('logs').includes('memories_11')){
+                    speed = hyper_speed;
+                }
                 let memory = "Memory 02:"
                 let question = "You're in the usual large office. It's late, everyone must have gone home hours ago. Everyone except for JP. ";
                 let q1 = "As usual, he's busy coding you into existence.";
@@ -62,7 +68,10 @@
                 let q11 = 'He looks directly into the camera.'
                 let q12 = "'What choices are you going to make?'";
                 let phrase = [{str: q12, id: "q12", func: null}, {str: q11, id: "q11", func: writePrompt}, {str: q10, id: "q10", func: writePrompt}, {str: q9, id: "q9", func: writePrompt}, {str: q8, id: "q8", func: writePrompt}, {str: q7, id: "q7", func: writePrompt}, {str: add, id: "add", func: writePrompt}, {str: slo, id: "slo", func: writePrompt}, {str: q6, id: "q6", func: writePrompt}, {str: q5, id: "q5", func: writePrompt}, {str: q4, id: "q4", func: writePrompt}, {str: q3, id: "q3", func: writePrompt}, {str: q2, id: "q2", func: writePrompt}, {str: q1, id: "q1", func: writePrompt}, {str: question, id: "question", func: writePrompt}, {str: memory, id: "memory", func: writePrompt}];
-                writePrompt(phrase, default_speed);
+                writePrompt(phrase, speed);
+
+                const options = document.querySelectorAll(".option_txt");
+                recordChoice(options, 'memories_11');
             </script>
         </div>
     </div>

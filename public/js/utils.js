@@ -1,4 +1,5 @@
 const default_speed = 30;
+const hyper_speed = 200;
 
 const recordChoice = (options, q) => {
     options.forEach(option => {
@@ -63,7 +64,7 @@ const analyzing = (phrase, speed) => {
             item.func(phrase, speed)
         }
         i++;
-    }, 50/speed);
+    }, 30/speed);
 }
 
 const showOptions = () => {

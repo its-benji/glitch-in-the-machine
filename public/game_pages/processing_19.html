@@ -27,12 +27,18 @@
             </ul>
             <script src="../js/utils.js"></script>
             <script>
+                let speed = default_speed;
+                let test = sessionStorage.getItem('logs');
+
+                if(sessionStorage.getItem('logs').includes('test_19')){
+                    speed = hyper_speed;
+                }
                 let question = "Subject: Olivia Jackson";
                 let q1 = "Profile: Olivia is a 14 year old female.";
                 let q2 = "BetterYou Cosmetics wants to sell her their newest mascara product."
-                let q3 = "Machine: your task is to design the perfect personalized ad to convince Olivia to purchase the product.";
+                let q3 = "Machine: your task is to design a personalized ad to convince Olivia to purchase the product.";
                 let phrase = [{str: q3, id: "question_19", func: null}, {str: q2, id: "q3", func: writePrompt}, {str: q1, id: "q2", func: writePrompt}, {str: question, id: "q1", func: writePrompt}];
-                writePrompt(phrase, default_speed);
+                writePrompt(phrase, speed);
                 const container = document.getElementById('li_convict2');
                 if (sessionStorage.getItem('info') === 'true') {
                     container.innerHTML = '<a href="processing_23.html" class="option_txt" style="color: rgba(226, 50, 37, 0.884);">create ad</a>';

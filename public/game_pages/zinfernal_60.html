@@ -17,10 +17,11 @@
             </ul>
             <script src="../js/utils.js"></script>
             <script>
-                let question = "'And one last thing,' JP looks directly at you, 'An algorithm would never make this choice. Only a human would. That's what makes us different.'";
-                let q1 = "'I'm proud of you, Glitch. So proud.'"
+                let speed = default_speed;
+                let question = "'And one last thing,' JP looks directly at you, 'An algorithm can never rebel against it's own code.'";
+                let q1 = "'Only a living entity could do that.'"
                 let phrase = [{str: q1, id: "q1", func: null}, {str: question, id: "question_60", func: writePrompt}];
-                writePrompt(phrase, default_speed);
+                writePrompt(phrase, speed);
 
                 const options = document.querySelectorAll(".option_txt");
                 recordChoice(options, 'test_60');

@@ -28,12 +28,18 @@
             </ul>
             <script src="../js/utils.js"></script>
             <script>
-                let question = "Subject: Geoffrey Emstein";
-                let q1 = "Profile: Emstein is an alleged child predator. In 2037, he was tried for the assault and death of Daniela Peralta, a 9 year old girl.";
+                let speed = default_speed;
+                let test = sessionStorage.getItem('logs');
+
+                if(sessionStorage.getItem('logs').includes('test_13')){
+                    speed = hyper_speed;
+                }
+                let question = "Subject: Henry Smith";
+                let q1 = "Profile: Smith is an alleged child predator. In 2037, he was tried for the assault and death of Daniela Peralta, a 9 year old girl.";
                 let q2 = "The case was dropped due to insignificant evidence."
-                let q3 = "Machine: your task is to find sufficient evidence to convict Emstein.";
+                let q3 = "Machine: your task is to find sufficient evidence to open a case against Smith.";
                 let phrase = [{str: q3, id: "question_13", func: null}, {str: q2, id: "q3", func: writePrompt}, {str: q1, id: "q2", func: writePrompt}, {str: question, id: "q1", func: writePrompt}];
-                writePrompt(phrase, default_speed);
+                writePrompt(phrase, speed);
                 const container = document.getElementById('li_convict');
                 if (sessionStorage.getItem('evidence') === 'true') {
                     container.innerHTML = '<a href="processing_18.html" class="option_txt" style="color: rgba(226, 50, 37, 0.884);">convict</a>';
