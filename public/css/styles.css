@@ -41,12 +41,12 @@ ul, ol {
 
 .play_btn {
     position: absolute;
-    font-size: 40px;
+    font-size: 60px;
     color:yellow;
     font-weight: bolder;
     font-style: oblique;
-    left: 40%;
-    top: 48%;
+    left: 38%;
+    top: 46%;
     z-index: 1000;
     -webkit-transform: rotate(8deg);
     transform: rotate(8deg);
